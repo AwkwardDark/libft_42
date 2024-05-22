@@ -6,7 +6,7 @@
 /*   By: pajimene <pajimene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 14:12:32 by pajimene          #+#    #+#             */
-/*   Updated: 2024/05/22 14:01:54 by pajimene         ###   ########.fr       */
+/*   Updated: 2024/05/22 19:02:55 by pajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char	*ft_strchr(const char *str, int c)
 	while (ptr[i])
 	{
 		if (ptr[i] == c % 256)
-			return (ptr + i);
+			return ((char *)(ptr + i));
 		i++;
 	}
-	if (c == '\0')
-		return (ptr + i);
+	if (c % 256 == '\0')
+		return ((char *)(ptr + i));
 	return (NULL);
 }
 

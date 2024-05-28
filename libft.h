@@ -6,7 +6,7 @@
 /*   By: pajimene <pajimene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 16:37:30 by pajimene          #+#    #+#             */
-/*   Updated: 2024/05/22 16:12:23 by pajimene         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:07:37 by pajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <stdarg.h>
 
+//Libc functions
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -40,6 +42,8 @@ char	*ft_strnstr(const char *str, const char *sub, size_t len);
 int		ft_atoi(const char *nptr);
 char	*ft_strdup(const char *str);
 void	*ft_calloc(size_t number, size_t size);
+
+//Additional functions
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -52,6 +56,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+//Bonus
 typedef struct s_list
 {
 	void			*content;
@@ -67,5 +72,15 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//Other projets
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putnbr(int n);
+int		ft_putunbr(unsigned int n);
+int		ft_puthex(unsigned long n, int b);
+int		ft_ptradd(unsigned long n);
+int		ft_parsing(va_list args, char c, int *len);
+int		ft_printf(const char *str, ...);
 
 #endif

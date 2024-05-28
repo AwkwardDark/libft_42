@@ -6,7 +6,7 @@
 /*   By: pajimene <pajimene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 16:37:30 by pajimene          #+#    #+#             */
-/*   Updated: 2024/05/28 14:07:37 by pajimene         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:58:12 by pajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 //Libc functions
 int		ft_isalpha(int c);
@@ -73,7 +74,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-//Other projets
+//ft_printf
 int		ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putnbr(int n);
@@ -82,5 +83,16 @@ int		ft_puthex(unsigned long n, int b);
 int		ft_ptradd(unsigned long n);
 int		ft_parsing(va_list args, char c, int *len);
 int		ft_printf(const char *str, ...);
+
+//gnl
+char	*get_next_line(int fd);
+char	*ft_read_line(char *buffer, int fd);
+char	*ft_join_free(char *buffer, char *temp_buffer);
+char	*ft_write_line(char *buffer);
+char	*ft_clean_buffer(char *buffer);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 
 #endif

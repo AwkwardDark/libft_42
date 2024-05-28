@@ -6,7 +6,7 @@
 #    By: pajimene <pajimene@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/17 16:34:24 by pajimene          #+#    #+#              #
-#    Updated: 2024/05/28 14:11:21 by pajimene         ###   ########.fr        #
+#    Updated: 2024/05/28 17:00:14 by pajimene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRC = ft_atoi.c \
       ft_toupper.c \
 	  ft_printf.c \
 	  ft_printf_utils.c \
-	  ft_printf_utils_hex.c
+	  ft_printf_utils_hex.c \
+	  get_next_line.c
 
 SRC_B = ft_lstadd_back_bonus.c \
         ft_lstadd_front_bonus.c \
